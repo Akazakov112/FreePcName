@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FreePcName.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DbServerUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DbServer</Value>
+    </Setting>
+    <Setting Name="DbName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DbName</Value>
+    </Setting>
+    <Setting Name="TableName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TableName</Value>
+    </Setting>
+    <Setting Name="AdLDAP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LDAP://domain.local/DC=domain,DC=local</Value>
+    </Setting>
+    <Setting Name="NamesMaxCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="DivisionFieldName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DivisionFieldName</Value>
+    </Setting>
+    <Setting Name="CityFieldName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CityFieldName</Value>
+    </Setting>
+    <Setting Name="AddressFieldName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AddressFieldName</Value>
+    </Setting>
+    <Setting Name="PrefixFieldName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PrefixFieldName</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

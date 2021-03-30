@@ -1,0 +1,60 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model IEnumerable<FreePcNameWeb.Models.Osps>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreePcName</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark border-bottom border-warning rounded-lg shadow-lg">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-xl-left" asp-controller="Main" asp-action="Index">FreePcName, поиск свободных имен устройств в домене.</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <main role="main" class="my-3">
+            <div class="row py-sm-1">
+                <div class="col-sm">
+                    <h4 class="text-white">Поиск ОСП:</h4>
+                    <input class="w-100 form-control shadow" type="text" id="searchString" placeholder="Введите название, адрес или префикс имени пк..." autofocus />
+                </div>
+                <div class="col-sm" style="height: 90px;">
+                    <label id="pcName"><strong>1.</strong> Найдите ОСП в списке с помощью поиска.</label><br />
+                    <label id="noteName"><strong>2.</strong> Выберите строку с найденным ОСП.</label><br />
+                    <label id="armName"><strong>3.</strong> Дважды кликните на строке левой кнопкой мыши.</label>
+                </div>
+            </div>
+            <div class="row py-sm-1">
+                <div class="col-sm">
+                    <form method="post" id="getNameForm" name="getNameForm">
+                        <select class="w-100 form-control custom-select shadow" size="30" id="selectOsp" name="selectOsp" required>
+                            @foreach (var osp in Model)
+                            {
+                                <option value="@osp.ShortName">@osp.Osp, г. @osp.City, @osp.Address</option>
+                            }
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script asp-src-include="~/js/*.js"></script>
+
+    <footer class="footer text-white top-corner-radius align-text-bottom">
+        <p class="text-center pt-2">Андрей Казаков, 2020 - FreePcName <a class="text-warning" href="https://site.ru/">Название компании</a></p>
+    </footer>
+</body>
+</html>
